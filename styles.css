@@ -1,0 +1,189 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: radial-gradient(ellipse at center, rgba(255, 254, 234, 1) 0%, rgba(255, 254, 234, 1) 35%, #B7E8EB 100%);
+    overflow: hidden;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.ocean {
+    height: 5%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #015871;
+}
+
+.wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+    position: absolute;
+    top: -198px;
+    width: 6400px;
+    height: 198px;
+    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+    top: -175px;
+    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+    opacity: 1;
+}
+
+@keyframes wave {
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: -1600px;
+    }
+}
+
+@keyframes swell {
+
+    0%,
+    100% {
+        transform: translate3d(0, -25px, 0);
+    }
+
+    50% {
+        transform: translate3d(0, 5px, 0);
+    }
+}
+
+
+h1 {
+    /* font-family: 'Lato', sans-serif; */
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 48px;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: #333333;
+}
+
+.bio {
+    line-height: 150%
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin: 12px;
+    margin-bottom: 24px;
+}
+
+.navigation>div {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-transform: lowercase;
+}
+
+.active-nav-link {
+    transition: color 0.3s;
+    border-bottom: 1px solid black;
+}
+
+.active-nav-link a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-link {
+    transition: color 0.3s;
+    border-bottom: 1px solid transparent;
+}
+
+.nav-link a {
+    color: #8a8a8a;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    border-bottom: 1px solid #8a8a8a;
+}
+
+.container {
+    margin-top: 10px;
+    margin-bottom: 60px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.nameblock {
+    font-size: 1.2em;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    line-height: 85%;
+}
+
+.courseblock {
+    line-height: 150%;
+}
+
+.circPic {
+    float: right;
+    margin-right: 130px;
+    width: 200px;
+    height: 200px;
+}
+
+.pageHead {
+    margin-top: 80px;
+}
+
+.blurb {
+    margin-left: 30px;
+    color: #808080;
+}
+
+.foot {
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 0.7em;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: normal;
+}
+
+h4 {
+
+    font-weight: normal;
+    font-style: italic;
+    font-size: 90%;
+}
+
+hr {
+    margin-top: 25px;
+}
+
+h5 {
+    font-size: 22px;
+    margin-bottom: -26px;
+}
+
+h6 {
+    font-size: 16px;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 16px;
+}
+
+ul {
+    margin-top: -7px;
+    margin-bottom: -7px;
+}
